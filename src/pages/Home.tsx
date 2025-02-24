@@ -92,7 +92,6 @@ const Home = () => {
 
   const handleChangeInputValue = (text: string) => {
     if (!text) return;
-    const searchText = encodeURIComponent(text);
     api
       .get(`/search/issues?q=${text}+repo:jhonglev/ignite_github_blog`)
       .then((response) => {
